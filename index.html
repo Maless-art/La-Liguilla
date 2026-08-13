@@ -246,7 +246,7 @@ if(!state.phase) state.phase = 'Apertura';
     if(!state.teams) state.teams = [];
     if(!state.matches) state.matches = [];
     if(!state.currentRound) state.currentRound = 1;
-if(!state.rounds) state.rounds = [1,2];
+if(!state.rounds) state.rounds = [1];
     state.matches.forEach(function(match){ if(!match.round) match.round = 1; });
     if(state.matches.length){
       state.currentRound = Math.max(state.currentRound, ...state.matches.map(function(match){ return Number(match.round || 1); }));
